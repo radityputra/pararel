@@ -18,8 +18,17 @@ class jumlah(threading.Thread):
 
 start = time.time
 
-hitung=jumlah(1, 5000000)
-print(hitung1.awal)
-print(hitung1.akhir)
+#memanggil thread
+hitung1=jumlah(1, 5000000)
+hitung2=jumlah(500001, 10000)
+
+#menjalankan thread
+hitung1.start()
+hitung2.start()
+
+#menampilkan hasil thread
+hitung1.hasil()
+
+
 end = time.time()
 print(end-start)
