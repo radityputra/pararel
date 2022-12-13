@@ -8,4 +8,6 @@ for suffix in range(1, 10):
     print("Jumlah ke-", suffix, "hasil", jumlah)
 
 end = time.time()
+
+print("Hasil", jumlah)
 print(end-start)

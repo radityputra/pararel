@@ -19,16 +19,21 @@ class jumlah(threading.Thread):
 start = time.time
 
 #memanggil thread
-hitung1=jumlah(1, 5000000)
-hitung2=jumlah(500001, 10000)
+hitung1=jumlah(1, 5000)
+hitung2=jumlah(5001, 10000)
 
 #menjalankan thread
 hitung1.start()
 hitung2.start()
 
 #menampilkan hasil thread
-hitung1.hasil()
-
+hitung1Hasil = hitung1.hasil()
+hitung2Hasil = hitung2.hasil()
 
 end = time.time()
+
+totalHitung = hitung1Hasil + hitung2Hasil
+print(hitung1Hasil, "+", hitung2Hasil, "=", totalHitung)
+
+
 print(end-start)
